@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2019.12.12b3</title>
+</head>
+<body>
+    <div id="container">
+        <p id="p1">
+            <button id="btn1">点击</button>
+        </p>
+        <a href="https://www.bilibili.com" id="link">B站</a>
+        <input type="text" id="txt"/>
+    </div>
+</body>
+<script>
+    var p1 = document.getElementById("p1");
+    var btn1 = document.getElementById("btn1");
+    /*
+        e.target表示事件的源对象
+        e.currentTarget表示当前监听事件的DOM对象
+        e.stopPropagation() 阻止事件的冒泡过程
+    */
+    btn1.onclick = function(e) {
+        e.stopPropagation();
+        console.log(e.target);
+    }
+    p1.onclick = function(e) {
+        console.log(e.target);
+        console.log(e.currentTarget);
+    }
+    
+    var link = document.getElementById("link");
+    link.onclick = function(e) {
+        e.preventDefault();
+    }
+
+    var txt = document.getElementById("txt");
+    txt.onkeypress = function(e) {
+        console.log(e.keyCode);
+    }
+</script>
+</html>
