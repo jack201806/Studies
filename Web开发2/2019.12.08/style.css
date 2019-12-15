@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul,li{
+    list-style: none;
+}
+
+.notice{
+    width: 1920px;
+    height: 20px;
+    background: #cccccc;
+    overflow: hidden;
+}
+
+.bell{
+    margin-left: 225px;
+    float: left;
+}
+
+#pp{
+    margin-left: 825px;
+    position:absolute;
+    overflow: hidden;
+    width: 350px;
+    height: 20px;
+    /* background-color: black; */
+    float: right;
+}
+
+.notice_p{
+    position: absolute;
+    margin-right: 1200px auto;
+    color: #ff0000;
+    width: 350px;
+    height: 20px;
+    font-size: smaller;
+    overflow: hidden;
+}
+
+.box{
+    width: 1200px;
+    height: 382px;
+    margin: 10px auto;
+    margin-left: 100px auto;
+    margin-right: 100px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider{
+    width: 8400px;
+    position: absolute;
+    left: -1200px;
+}
+
+.slide{
+    width: 1200px;
+    overflow: hidden;
+    float: left;
+}
+
+.box>span{
+    display: block;
+    width: 30px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    color: #ffffff;
+    top: 175px;
+    line-height: 50px;
+    background: #ff0000;
+    font-size: 30px;
+    position: absolute;
+    /* display: none; */
+    opacity: 0;
+}
+
+#left{
+    left: 30px;
+}
+
+#right{
+    right: 30px;
+}
+
+.nav{
+    position: absolute;
+    left: 500px;
+    bottom: 20px;
+}
+
+.nav>li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #cccccc;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: smaller;
+}
+
+.nav .active{
+    background: #ff0000;
+    color: #ffffff;
+}
