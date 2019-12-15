@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2019.12.08c1</title>
+    <script src="./animate.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="notice">
+        <div class="bell">
+            <img src="./images/a15.png" alt="">
+        </div>
+        <div id="pp">
+            <p class="notice_p" id="notice_p">[温馨提示]最近有不少不法分子在网上骗人，请大家注意!!!</p>
+        </div>
+    </div>
+    <div class="box" id="box">
+        <div class="slider" id="slider">
+            <div class="slide"><img src="./images/b5.png" alt=""></div>
+            <div class="slide"><img src="./images/b1.png" alt=""></div>
+            <div class="slide"><img src="./images/b2.png" alt=""></div>
+            <div class="slide"><img src="./images/b3.png" alt=""></div>
+            <div class="slide"><img src="./images/b4.png" alt=""></div>
+            <div class="slide"><img src="./images/b5.png" alt=""></div>
+            <div class="slide"><img src="./images/b1.png" alt=""></div>
+        </div>
+        <span id="left"><</span>
+        <span id="right">></span>
+        <ul class="nav" id="nav">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+<script>
+    var box = document.getElementById("box");
+    var nav = document.getElementById("nav");
+    var oNavList = nav.children;
+    var slider = document.getElementById("slider");
+    var slide = document.getElementById("slide");
+    var left = document.getElementById("left");
+    var right = document.getElementById("right");
+    // var active = document.getElementById("active");
+    var index = 1;
+    var timer;
+    var isMoving = false;
+    function next() {
+        index++;
+        navChange();
+        animate(slider,{left:-1200*index},function(){
+            if(index === 6){
+                slider.style.left = "-1200px";
+                index = 1;
+            }
+            console.log(index);
+        });
+    }
+
+    function previous() {
+        index--;
+        navChange();
+        animate(slider,{left:-1200*index},function(){
+            if(index === 0){
+                slider.style.left = "-6000px";
+                index = 5;
+            }
+            console.log(index);
+        });
+    }
+    var timer = setInterval(next,2000);//interval至少是2000，否则index从6会一直加下去而不是返回1
+
+    box.onmouseover = function(){
+        animate(left,{opacity:50});
+        animate(right,{opacity:50});
+        clearInterval(timer);
+    }
+
+    box.onmouseout = function(){
+        animate(left,{opacity:0});
+        animate(right,{opacity:0});
+        timer = setInterval(next,2000);
+    }
+
+    left.onclick = previous;//千万别加“()”!否则程序无效
+    right.onclick = next;
+
+    for(var i=0;i<oNavList.length;i++){
+        oNavList[i].index = i;
+        // console.log(i);
+        oNavList[i].onclick = function(){
+            console.log(this.index);
+            index = this.index + 1;
+            navChange();
+            animate(slider,{left:-1200*index});
+        }
+    }
+
+    function navChange(){
+        for(var i=0;i<oNavList.length;i++){
+            oNavList[i].className = '';
+        }
+        if(index === 6){
+            oNavList[0].className = 'active';
+        }else if(index === 0){
+            oNavList[4].className = 'active';
+        }else{
+            oNavList[index-1].className = 'active';
+        }
+    }
+
+    var p = document.getElementById("notice_p");
+    var i = 130;
+    setInterval(function(){
+        i--;
+        p.style.left = i + "px";
+        if(i === 0){
+            i = 130;
+        }
+    },10);
+</script>
+</html>
