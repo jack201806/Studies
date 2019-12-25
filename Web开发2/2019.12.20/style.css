@@ -9,6 +9,7 @@ select{border: 0px;}
 a{text-decoration: none;}
 li{list-style-type: none;}
 #origin{
+    width: 1900px;
     margin: 0 auto;
 }
 #daeh{
@@ -22,7 +23,7 @@ li{list-style-type: none;}
     padding-top: 9px;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     /* top:0;无论鼠标的滚轮如何往下滑动，上面的导航栏一直停在最上面 */
 }
 .seyeon p{
@@ -33,7 +34,7 @@ li{list-style-type: none;}
     font-family: Arial Unicode MS;
     position: relative;
 }
-
+/* ----- */
 .close{
     float: right;
     left: 50%;
@@ -56,21 +57,20 @@ li{list-style-type: none;}
     margin-right: 3px;
     margin-top: 0px; */
 }
-
 .close p{   
     line-height: 13px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
 }
-
 .close:hover{
     background: red;
 }
-
 .close::before{
     content: "\2716";
 }
+
+/* --------------- */
 
 .weon{
     width: 100%;
@@ -78,11 +78,11 @@ li{list-style-type: none;}
     /* position: fixed;
     top: 0; */
     margin-top: 48px;
-    /* z-index: 0; */
     background-color: rgb(0,0,255);
     position: relative;
+    z-index: 2;
 }
-.weon_home{
+/* .weon_home{
     width: 30px;
     height: 27px;
     margin-left: 10px;
@@ -91,7 +91,7 @@ li{list-style-type: none;}
     background-color: rgb(255,255,255);
     padding-left: 2.5px;
     padding-top: 2.5px;
-}
+} */
 /* .weon_cookies{
     width: 750px;
     height: 30px;
@@ -117,20 +117,21 @@ li{list-style-type: none;}
     float: right;
 } */
 .weon_idcards_faq{
-    width: 120px;
+    width: 150px;
     height: 30px;
+    margin-left: 12px;
     margin-right: 12px;
     display: inline-block;
     float: left;
 }
 .weon_login{
-    width: 120px;
+    width: 150px;
     height: 30px;
     margin-right: 12px;
     display: inline-block;
     float: left;
 } 
-.weon_rya{
+/* .weon_rya{
     width: 120px;
     height: 30px;
     margin-right: 12px;
@@ -165,7 +166,7 @@ li{list-style-type: none;}
 .weon_sap{
     width: 120px;
     height: 30px;
-    /* margin-left: 12px; */
+    margin-left: 12px;
     margin-right: 12px;
     display: inline-block;
     float: right;
@@ -179,8 +180,38 @@ li{list-style-type: none;}
     line-height: 30px;
     font-family: Gotham Rounded;
     font-weight: Medium;
+} */
+.weon_lenda{
+    width: 180px;
+    height: 30px;
+    margin-right: 12px;
+    display: inline-block;
+    text-align: center;
+    float: left;
+    /* background-color: rgb(173,255,51); */
+    background: blue;
+}
+.weon_lenda a{
+    font-size: 16px;
+    /* color: rgb(237,28,36); */
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial Unicode MS;
 }
 .home{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.idcards_faq{
+    font-size: 16px;
+    color: rgb(255,255,255);
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial Unicode MS;
     display: block;
     width: 100%;
     height: 100%;
@@ -197,22 +228,145 @@ li{list-style-type: none;}
     line-height: 30px;
     font-family: Arial Unicode MS;
 }
-.idcards_faq{
-    font-size: 16px;
-    color: rgb(255,255,255);
-    text-align: center;
-    line-height: 30px;
+/* ----- */
+.weon ul{
+    width: 150px;
+    overflow: hidden;
+    display: none;
     font-family: Arial Unicode MS;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+.weon_lenda ul{
+    width: 180px;
+    overflow: hidden;
+    display: none;
+    font-family: Arial Unicode MS;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+/* ----- */
+.weon ul li{
+    width: 150px;
+    float: left;
+    list-style: none;
+    /* margin-top: 1.5px; */
+    /* margin-bottom: 1.5px; */
+}
+.weon_lenda ul li{
+    width: 180px;
+    float: none;
+    list-style: none;
+    /* margin-top: 1.5px; */
+    /* margin-bottom: 1.5px; */
+}
+/* ----- */
+.weon ul li ul{
+    display: none;
+}
+.weon_lenda ul li ul{
+    display: none;
+}
+/* ----- */
+.weon_idcards_faq ul li a{
+    color: #FFFFFF;
+    display:inline-block;
+    line-height:30px;
+    height:30px;
+    width:150px;
+    background:#f00;
+    text-decoration:none;
+    text-align:center;
+}
+.weon_login ul li a{
+    color: #FFFFFF;
+    display:inline-block;
+    line-height:30px;
+    height:30px;
+    width:150px;
+    background:#08f;
+    text-decoration:none;
+    text-align:center;
+}
+.weon_lenda ul li a{
+    color: #f00;
+    display:inline-block;
+    line-height:30px;
+    height:30px;
+    width:180px;
+    background:rgb(173,255,51);
+    text-decoration:none;
+    text-align:center;
+}
+/* ----- */
+.weon ul li:hover ul{
     display: block;
-    width: 100%;
-    height: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+    z-index: 2;
+}
+.weon_lenda ul li:hover ul{
+    display: block;
+    margin-left: 0px;
+    padding-left: 0px;
+    z-index: 2;
+}
+/* ----- */
+.weon_idcards_faq ul li:hover a{
+    background: #f80;
+}
+.weon_login ul li:hover a{
+    background: #0ff;
+}
+.weon_lenda ul li:hover a{
+    background: aquamarine;
+}
+/* ----- */
+.weon ul li:hover ul li {
+    list-style:none;
+    float:none;
+    z-index: 2;
+    /*text-align:center;*/
+}
+.weon_lenda ul li:hover ul li {
+    list-style:none;
+    float:none;
+    z-index: 2;
+    /*text-align:center;*/
+}
+/* ----- */
+.weon_idcards_faq:hover{
+    background: red;
+    text-decoration: none;
+    z-index: 2;
+}
+.weon_login:hover{
+    background: #08f;
+    text-decoration: none;
+    z-index: 2;
+}
+.weon_lenda:hover{
+    background: rgb(173,255,51);
     text-decoration: none;
 }
+/* ----- */
+.weon_lenda:hover a{
+    color: red;
+}
+
+/* --------------- */
+
 .teoh{
-    width: 100%;
+    width: 1900px;
+    /* width: 100%;100%一旦页面缩小会使得div显示不完整 */
     height: 120px;
     background-image: url("images/ONV_Pages/p02.png");
+    z-index: 0;
+    margin: 0;
 }
+/* ----- */
 .teoh_logo{
     padding-left: 10px;
     margin-left: 42px;
@@ -223,18 +377,20 @@ li{list-style-type: none;}
     opacity: 0.7;
     transition:opacity 0.5s;
     margin-bottom: 10px;
-    z-index: -1;
+    z-index:-1;
 }
-
 .teoh_logo:hover{
     opacity: 1;
 }
 
+/* --------------- */
+
 .tsae{
     margin: 20px;
     width: 100%;
+    z-index: -1;
 }
-
+/* ----- */
 .tsae_l{
     height: 720px;
     width: 260px;
@@ -244,8 +400,9 @@ li{list-style-type: none;}
     overflow: hidden;
     background: linear-gradient(to right,aqua,white);
     float: left;
+    z-index: -2;
 }
-
+/* - */
 .sah{
     position: absolute;
     border-radius: 10px;
@@ -287,7 +444,7 @@ li{list-style-type: none;}
     top: 50%;
     transform: translate(-50%,-50%);
 }
-
+/* ----- */
 .tsae_chung{
     height: 720px;
     width: 1280px;
@@ -298,8 +455,9 @@ li{list-style-type: none;}
     overflow: hidden;
     background: -webkit-linear-gradient(left, #7fffd4, #ffffff 0%, #7fffd4,#ffffff 100%, #7fffd4);
     /* float: right; */
+    /* z-index: -2; */
 }
-
+/* - */
 .slider{
     width: 8960px;
     position: absolute;
@@ -314,7 +472,7 @@ li{list-style-type: none;}
     overflow: hidden;
     float: left;
 }
-
+/* - */
 .tsae_chung>span{
     display: block;
     width: 30px;
@@ -339,7 +497,7 @@ li{list-style-type: none;}
 #Rok{
     right: 50px;
 }
-
+/* - */
 .nav_0{
     position: absolute;
     border-radius: 6px;
@@ -374,7 +532,7 @@ li{list-style-type: none;}
     color: #ff0080;
     /* color: aquamarine; */
 }
-
+/* ----- */
 .tsae_r{
     height: 720px;
     width: 260px;
@@ -385,27 +543,10 @@ li{list-style-type: none;}
     overflow: hidden;
     background: linear-gradient(to right, white, antiquewhite);
     float: right;
+    z-index: -2;
 }
 
-.idcards_faq:hover{
-    color: rgb(128,128,128);
-    text-decoration: none;
-}
-
-.idcards_faq:active{
-    color: rgb(255,255,255);
-    text-decoration: none;
-}
-
-.login:hover{
-    color: rgb(128,128,128);
-    text-decoration: none;
-}
-
-.login:active{
-    color: rgb(255,255,255);
-    text-decoration: none;
-}
+/* --------------- */
 
 button{
     height: 52px;
@@ -416,9 +557,12 @@ button{
     border-radius: 18px;
 }
 
+/* --------------- */
+
 .Seyeon-Ha{
     height: 120px;
-    width: 100%;
+    /* width: 100%; */
+    width: 1900px;
     margin-top: 740px;
     position: absolute;
     background-color: limegreen;
@@ -430,6 +574,8 @@ button{
 	/* position: fixed; */
 	/* bottom: 0; */
 }
+
+/* --------------- */
 
 .sign{
     position: absolute;
