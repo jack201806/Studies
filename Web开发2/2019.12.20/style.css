@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+select{border: 0px;}
+a{text-decoration: none;}
+li{list-style-type: none;}
+#origin{
+    margin: 0 auto;
+}
+#daeh{
+    width: 100%;
+    height: 1008px;
+}
+.seyeon{
+	width: 100%;
+	height: 39px;
+	background-color: rgb(0,237,0);
+    padding-top: 9px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    /* top:0;无论鼠标的滚轮如何往下滑动，上面的导航栏一直停在最上面 */
+}
+.seyeon p{
+	font-size: 20px;
+	color: rgb(255,255,255);
+	text-align: center;
+	line-height: 30px;
+    font-family: Arial Unicode MS;
+    position: relative;
+}
+
+.close{
+    float: right;
+    left: 50%;
+    top: 50%;
+    margin-bottom: 10px;
+    transform: translate(-50%,-100%);
+    padding-bottom: 3px;
+    /* top: 50%; */
+    /* bottom: 50%; */
+    color: white;
+    margin: 0 auto;
+    cursor: pointer;
+    /* position: relative;
+    height: 13px;
+    width: 13px;
+    margin-bottom: 20px;
+    background: transparent;
+    color: white;
+    margin: 0 auto;
+    margin-right: 3px;
+    margin-top: 0px; */
+}
+
+.close p{   
+    line-height: 13px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.close:hover{
+    background: red;
+}
+
+.close::before{
+    content: "\2716";
+}
+
+.weon{
+    width: 100%;
+    height: 30px;
+    /* position: fixed;
+    top: 0; */
+    margin-top: 48px;
+    /* z-index: 0; */
+    background-color: rgb(0,0,255);
+    position: relative;
+}
+.weon_home{
+    width: 30px;
+    height: 27px;
+    margin-left: 10px;
+    display: inline-block;
+    float: left;
+    background-color: rgb(255,255,255);
+    padding-left: 2.5px;
+    padding-top: 2.5px;
+}
+/* .weon_cookies{
+    width: 750px;
+    height: 30px;
+    margin-left: 10px;
+    display: inline-block;
+    float: left;
+    background-color: rgb(255,0,255);
+}
+.weon_cookies p{
+    font-size: 16px;
+    color: rgb(255,255,255);
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial Unicode MS;
+    float: left;
+} */
+/* .weon_cookies a{
+    font-size: 16px;
+    color: rgb(0,128,255);
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial Unicode MS;
+    float: right;
+} */
+.weon_idcards_faq{
+    width: 120px;
+    height: 30px;
+    margin-right: 12px;
+    display: inline-block;
+    float: left;
+}
+.weon_login{
+    width: 120px;
+    height: 30px;
+    margin-right: 12px;
+    display: inline-block;
+    float: left;
+} 
+.weon_rya{
+    width: 120px;
+    height: 30px;
+    margin-right: 12px;
+    display: inline-block;
+    float: left;
+    background-color: rgb(173,255,51);
+}
+.weon_rya p{
+    font-size: 16px;
+    color: rgb(237,28,36);
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial Unicode MS;
+}
+.weon_juk{
+    width: 120px;
+    height: 30px;
+    margin-right: 12px;
+    display: inline-block;
+    float: left;
+    background-color: rgb(173,255,51);
+    position: relative;
+}
+.weon_juk p{
+    font-size: 16px;
+    color: rgb(34,177,76);
+    text-align: center;
+    line-height: 30px;
+    font-family: Gotham Rounded;
+    font-weight: Medium;
+}
+.weon_sap{
+    width: 120px;
+    height: 30px;
+    /* margin-left: 12px; */
+    margin-right: 12px;
+    display: inline-block;
+    float: right;
+    background-color: rgb(173,255,51);
+    position: absolute;
+}
+.weon_sap p{
+    font-size: 16px;
+    color: rgb(63,72,204);
+    text-align: center;
+    line-height: 30px;
+    font-family: Gotham Rounded;
+    font-weight: Medium;
+}
+.home{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.login{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(255,255,255);
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial Unicode MS;
+}
+.idcards_faq{
+    font-size: 16px;
+    color: rgb(255,255,255);
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial Unicode MS;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.teoh{
+    width: 100%;
+    height: 120px;
+    background-image: url("images/ONV_Pages/p02.png");
+}
+.teoh_logo{
+    padding-left: 10px;
+    margin-left: 42px;
+    display: inline-block;
+    float: left;
+    background: white;
+    /* opacity: 0.7; */
+    opacity: 0.7;
+    transition:opacity 0.5s;
+    margin-bottom: 10px;
+    z-index: -1;
+}
+
+.teoh_logo:hover{
+    opacity: 1;
+}
+
+.tsae{
+    margin: 20px;
+    width: 100%;
+}
+
+.tsae_l{
+    height: 720px;
+    width: 260px;
+    margin-left: 0px;
+    margin-right: 15px;
+    position: absolute;
+    overflow: hidden;
+    background: linear-gradient(to right,aqua,white);
+    float: left;
+}
+
+.sah{
+    position: absolute;
+    border-radius: 10px;
+    /* left: 26px;
+    right: 26px; */
+    /* top: 30px;
+    bottom: 30px; */
+    background-color: aquamarine;
+    opacity: 0.67;
+    text-align: center;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.sah>li{
+    float: left;
+    /* top: 80px;
+    bottom: 80px; */
+    /* left: 50%;
+    top: 50%;
+    transform: translate(0%,0%); */
+    width: 208px;
+    height: 80px;
+    color:#ff00ff;
+    background-color: transparent;
+    font-family: Arial Unicode MS;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: larger;
+    line-height: 80px;/*line-height跟height的值相等，才可以使得文字水平垂直居中*/
+}
+
+#lisa{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.tsae_chung{
+    height: 720px;
+    width: 1280px;
+    /* margin: 10px auto; */
+    margin-left: 290px;
+    margin-right: 15px;
+    position: absolute;
+    overflow: hidden;
+    background: -webkit-linear-gradient(left, #7fffd4, #ffffff 0%, #7fffd4,#ffffff 100%, #7fffd4);
+    /* float: right; */
+}
+
+.slider{
+    width: 8960px;
+    position: absolute;
+    left: -1280px;
+    /* left: 50%; */
+    /* top: 50%;
+    transform: translate(0,-50%); */
+}
+
+.slide{
+    width: 1280px;
+    overflow: hidden;
+    float: left;
+}
+
+.tsae_chung>span{
+    display: block;
+    width: 30px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    color: #80ff80;
+    top: 335px;
+    bottom: 335px;
+    line-height: 50px;
+    background-color: transparent;
+    font-size: 100px;
+    position: absolute;
+    /* display: none; */
+    opacity: 0;
+}
+
+#Sah{
+    left: 10px;
+}
+
+#Rok{
+    right: 50px;
+}
+
+.nav_0{
+    position: absolute;
+    border-radius: 6px;
+    left: 500px;
+    bottom: 20px;
+    width: 200px;
+    height: 30px;
+    background-color: azure;
+}
+
+.nav{
+    position: absolute;
+    /* left: 500px;
+    bottom: 20px; */
+}
+
+.nav>li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    color:#ff00ff;
+    background-color: transparent;
+    font-family: Arial Unicode MS;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: larger;
+}
+
+.nav .active{
+    color: #ff0080;
+    /* color: aquamarine; */
+}
+
+.tsae_r{
+    height: 720px;
+    width: 260px;
+    /* margin: 10px auto; */
+    margin-left: 1600px;
+    margin-right: 0px;
+    position: absolute;
+    overflow: hidden;
+    background: linear-gradient(to right, white, antiquewhite);
+    float: right;
+}
+
+.idcards_faq:hover{
+    color: rgb(128,128,128);
+    text-decoration: none;
+}
+
+.idcards_faq:active{
+    color: rgb(255,255,255);
+    text-decoration: none;
+}
+
+.login:hover{
+    color: rgb(128,128,128);
+    text-decoration: none;
+}
+
+.login:active{
+    color: rgb(255,255,255);
+    text-decoration: none;
+}
+
+button{
+    height: 52px;
+    width: 52px;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    border-radius: 18px;
+}
+
+.Seyeon-Ha{
+    height: 120px;
+    width: 100%;
+    margin-top: 740px;
+    position: absolute;
+    background-color: limegreen;
+    /* font-weight: bolder; */ 
+    font-size: larger;
+    color: aliceblue;
+    text-align: center;
+    vertical-align: middle;
+	/* position: fixed; */
+	/* bottom: 0; */
+}
+
+.sign{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /*
+        要想水平居中对齐，上面left,top和transform缺一不可（微笑）
+    */
+    font-family: Gotham Rounded Light;
+}
