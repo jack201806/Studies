@@ -19,12 +19,6 @@
 				<div id="close" class="close"></div>
 			</div>
 			<div class="weon" id="weon">
-				<!-- <div class="weon_cookies" id="cookies">
-					<p id="notice">
-						温馨提示：本站点使用Cookies。继续浏览该网站即表示您同意我们使用Cookies
-						<a id="c_p" href="onvista_c&p.html">Cookies和隐私政策</a>
-					</p>
-				</div> -->
 				<div class="weon_idcards_faq" id="idcards_faq">
 					<a href="onvista_idcardcenter.html" class="idcards_faq">工作证中心</a>
 						<ul id="idc">
@@ -52,24 +46,6 @@
 							<li><a href="#">Lenda Sarieh</a></li>
 						</ul>
 				</div>
-				<!-- <div class="weon_rya">
-					<a href=""></a>
-					<p>
-						简体中文
-					</p>
-				</div>
-				<div class="weon_juk">
-					<a href=""></a>
-					<p>
-						English
-					</p>
-				</div>
-				<div class="weon_sap">
-					<a href=""></a>
-					<p>
-						Lenda Sarieh
-					</p>
-				</div> -->
 			</div>
 			<div class="teoh" id="teoh">
 				<div class="teoh_logo" id="logo">
@@ -176,7 +152,6 @@
 		weon.style.marginTop = "0px";
 		weon.style.position = "fixed";
 		weon.style.top = "0";
-		// weon.style.zIndex = "2";
 		teoh.style.marginTop = "30px";
 	}
 	
@@ -264,12 +239,6 @@
 <script id="l&r">
 	var l = document.getElementById("l");
 	var r = document.getElementById("r");
-	// l.onmouseover = function(){
-	// 	l.style.background = "aqua";
-	// }
-	// l.onmouseout = function(){
-	// 	l.style.background="linear-gradient(to right,aqua,white)"
-	// }
 </script>
 <script id="Seyeon-Ha">
 	var sh = document.getElementById("Seyeon-Ha");
@@ -277,12 +246,10 @@
 		sh.style.backgroundColor=rc();//rc即表random color（随机颜色）意
 	}
 	function rc(){
-		// var col = "rgba(";
 		var col = "rgb(";
 		for(var i=0;i<3;i++){
 			col+=Math.floor(Math.random()*256)+",";
 		}
-		// col+=Math.random().toFixed(2)+")";
 		col=col.slice(0,-1);
 		col+=")";
 		return col;
